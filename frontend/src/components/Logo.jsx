@@ -9,7 +9,7 @@ const Logo = ({ compact = false }) => (
     />
     {!compact && (
       <span className="pl-0.5 text-[9px] font-medium uppercase tracking-[0.3em] text-gold/90">
-        Grow Together · Earn Together
+        Keep Grow With FinGrow
       </span>
     )}
   </div>
