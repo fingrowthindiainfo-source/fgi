@@ -22,7 +22,7 @@ const StartWork = () => {
         <Reveal delay={0.15}>
           <div className="perspective-1400 mx-auto mt-14 max-w-xl" data-testid="signature-flip-card">
             <div
-              className="preserve-3d relative transition-transform duration-[850ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)]"
+              className="preserve-3d relative transition-transform duration-[1200ms] [transition-timing-function:cubic-bezier(0.65,0,0.35,1)]"
               style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
             >
               {/* Front face */}
@@ -35,8 +35,12 @@ const StartWork = () => {
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" aria-hidden="true" />
                 <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-gold/10 blur-3xl" aria-hidden="true" />
                 <div className="flex min-h-[420px] flex-col items-center justify-center p-10 text-center sm:p-14">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-gold/40 bg-navy/70 shadow-[0_0_40px_rgba(214,181,116,0.15)]">
-                    <span className="font-display text-lg font-extrabold tracking-widest text-gold">FGI</span>
+                  <div className="flex items-center justify-center">
+                    <img
+                      src="/assets/fgi-emblem.jpg"
+                      alt="Fin Growth India"
+                      className="h-20 w-auto rounded-xl mix-blend-screen drop-shadow-[0_0_30px_rgba(214,181,116,0.2)]"
+                    />
                   </div>
                   <h3 className="mt-8 font-display text-2xl font-extrabold text-white sm:text-3xl" data-testid="signature-card-front-heading">
                     Ready to Take Your Next Step?

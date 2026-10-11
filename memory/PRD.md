@@ -34,6 +34,10 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 7)
+- Card flips retimed for a premium feel: audience cards 1150ms, signature card 1200ms, both on an even ease-in-out curve (0.65,0,0.35,1); mouse-tilt moved to its own layer so flips stay slow while tilt stays responsive
+- Signature card front now uses the real FGI emblem instead of the monogram badge
+
 ## Updates (2026-10-11, round 6)
 - Leadership photos wired in: Arsh Preet Singh + Tannu Sharma (user-supplied, cropped to 560×560 portraits at /assets/team/); Vikram Nehra still monogram placeholder
 - 1200×630 branded OG share image created (/assets/og-image.jpg — navy bg, FGI emblem, brand name, tagline); og:image + twitter:image set at runtime from the serving origin (self-adapts to any domain), og:image:width/height/alt in static head; verified serving 200

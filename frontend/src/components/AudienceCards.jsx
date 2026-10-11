@@ -29,6 +29,14 @@ const AudienceCard = ({ audience, index }) => {
   return (
     <Reveal delay={0.08 * (index % 4)} className="h-full">
       <div className="perspective-1400 h-full" data-testid={`audience-card-${audience.key}`}>
+        {/* Tilt layer — fast, responsive to the mouse; separate from the flip layer */}
+        <div
+          className="preserve-3d h-full transition-transform duration-300 ease-out"
+          style={{ transform: flipped ? "none" : `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }}
+          onMouseMove={onMouseMove}
+          onMouseLeave={() => setTilt({ x: 0, y: 0 })}
+        >
+        {/* Flip layer — slow, even ease for a premium feel */}
         <div
           role="button"
           tabIndex={0}
@@ -36,16 +44,9 @@ const AudienceCard = ({ audience, index }) => {
           aria-label={`${audience.title} — flip card for details`}
           onClick={toggle}
           onKeyDown={onKeyDown}
-          onMouseMove={onMouseMove}
-          onMouseLeave={() => setTilt({ x: 0, y: 0 })}
           data-testid={`audience-flip-${audience.key}`}
-          className="preserve-3d gold-ring-focus relative h-[460px] cursor-pointer rounded-3xl outline-none transition-transform duration-[800ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)]"
-          style={{
-            transform: flipped
-              ? "rotateY(180deg)"
-              : `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-            transitionDuration: flipped ? "800ms" : "300ms",
-          }}
+          className="preserve-3d gold-ring-focus relative h-[460px] cursor-pointer rounded-3xl outline-none transition-transform duration-[1150ms] [transition-timing-function:cubic-bezier(0.65,0,0.35,1)]"
+          style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
         >
           {/* Front */}
           <div
@@ -107,6 +108,7 @@ const AudienceCard = ({ audience, index }) => {
               </button>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </Reveal>
