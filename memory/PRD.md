@@ -34,6 +34,10 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 15)
+- Trust strip added above footer on all main pages (via Layout): MSME Registered badges marquee right→left ("Registrations & Certifications"), platform network pills marquee left→right (Zerodha, Upstox, Angel One) — 32s linear loops, hover-pause, reduced-motion safe, ownership disclaimer included
+- Only user-confirmed names used; more certificates/platforms PENDING from user (lists in content.js: CERTIFICATIONS, PLATFORM_NETWORK)
+
 ## Updates (2026-10-11, round 14)
 - Loading animation now uses the new horizontal transparent logo with "KEEP GROW WITH FINGROW" tagline (was emblem + company name)
 

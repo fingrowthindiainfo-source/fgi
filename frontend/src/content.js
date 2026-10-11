@@ -210,3 +210,10 @@ export const REVIEWS = [
     role: "FGI Participant",
   },
 ];
+
+// Only registrations/partnerships explicitly confirmed by the company are listed here.
+export const CERTIFICATIONS = [
+  { name: "MSME", sub: "Registered", note: "Ministry of MSME, Govt. of India" },
+];
+
+export const PLATFORM_NETWORK = ["Zerodha", "Upstox", "Angel One"];
