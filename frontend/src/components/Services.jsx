@@ -10,9 +10,9 @@ const Services = () => (
     <div className="mx-auto max-w-7xl px-5 lg:px-8">
       <Reveal className="max-w-2xl">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Our Services</p>
-        <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-testid="services-headline">
+        <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-testid="services-headline">
           Business Support, <span className="text-gold-gradient">Delivered with Care.</span>
-        </h2>
+        </h1>
         <p className="mt-5 text-base leading-relaxed text-mist md:text-lg">
           We work across business-support areas such as banking, broking, credit card operations, KYC-related activities, customer support, data entry, and data management.
         </p>

@@ -9,9 +9,9 @@ const HowItWorks = () => (
     <div className="mx-auto max-w-7xl px-5 lg:px-8">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-dark">How It Works</p>
-        <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl" data-testid="how-it-works-headline">
+        <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl" data-testid="how-it-works-headline">
           From Inquiry to Opportunity
-        </h2>
+        </h1>
       </Reveal>
 
       <div className="relative mx-auto mt-16 max-w-3xl">

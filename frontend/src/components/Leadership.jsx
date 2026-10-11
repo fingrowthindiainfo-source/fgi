@@ -8,9 +8,9 @@ const Leadership = () => (
     <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Leadership</p>
-        <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-testid="leadership-headline">
+        <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-testid="leadership-headline">
           Leadership Built Around <span className="text-gold-gradient">Growth</span>
-        </h2>
+        </h1>
         <p className="mt-5 text-base leading-relaxed text-mist md:text-lg">
           Our leadership team is committed to creating opportunities, supporting skill development, and helping people explore professional growth through guidance and practical experience.
         </p>

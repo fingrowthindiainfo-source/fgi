@@ -36,32 +36,6 @@ const ScrollAndMeta = () => {
 function App() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Organization structured data (facts supplied by the company)
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Fin Growth India",
-      alternateName: "FGI",
-      description: "Business-support opportunities, skill development, and professional growth.",
-      email: "fingrowthindia.info@gmail.com",
-      telephone: "+91 9785868775",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Mansarovar, Jaipur",
-        addressRegion: "Rajasthan",
-        postalCode: "302020",
-        addressCountry: "IN",
-      },
-      foundingDate: "2022-05",
-      url: window.location.origin,
-    });
-    document.head.appendChild(script);
-    return () => document.head.removeChild(script);
-  }, []);
-
   return (
     <div className="App bg-navy min-h-screen">
       {loading && <Loader onDone={() => setLoading(false)} />}

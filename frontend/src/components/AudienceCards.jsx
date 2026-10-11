@@ -120,9 +120,9 @@ const AudienceCards = () => (
     <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Opportunities</p>
-        <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-testid="audience-headline">
+        <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-testid="audience-headline">
           Your Journey. Your Schedule. <span className="text-gold-gradient">Your Opportunity.</span>
-        </h2>
+        </h1>
         <p className="mt-5 text-base leading-relaxed text-mist md:text-lg">
           Different backgrounds. Different ambitions. One place to explore your next step.
         </p>

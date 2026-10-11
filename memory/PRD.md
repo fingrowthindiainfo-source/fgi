@@ -34,6 +34,14 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 5 — SEO skill pass)
+- robots.txt in public/ (allow all, Disallow /api/, explicit AI-crawler group: Googlebot, Bingbot, GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, PerplexityBot, Google-Extended, Applebot(-Extended), meta-externalagent, facebookexternalhit, Twitterbot, Amazonbot, CCBot) — verified served as text/plain, not SPA shell
+- llms.txt in public/ (site summary, page list, confirmed contact facts only)
+- Static head: robots meta (index,follow), og:site_name, og:locale en_IN, apple-touch-icon (real logo PNG), Organization JSON-LD moved from client injection to static head (no url/image — pending domain), real <noscript> content fallback
+- FAQPage JSON-LD (10 Q&A, mirrors visible page text) injected on /faqs route only
+- One h1 per page verified on all 9 routes
+- sitemap.xml NOT created: requires confirmed production domain (preview host in <loc> would poison indexing) — pending go-live, then add sitemap + Sitemap: line in robots.txt + og:image/og:url absolute URLs
+
 ## Updates (2026-10-11, round 4)
 - Per-page SEO: every route now sets a unique document.title + meta description + OG/Twitter title & description via extended useTitle hook (verified in-browser on 6 routes)
 

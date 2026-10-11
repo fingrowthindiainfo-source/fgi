@@ -12,9 +12,9 @@ const Contact = () => {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-dark">Contact</p>
-            <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl" data-testid="contact-headline">
+            <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl" data-testid="contact-headline">
               Let’s Start a Conversation.
-            </h2>
+            </h1>
             <p className="mt-5 max-w-md text-base leading-relaxed text-navy/70 md:text-lg">
               Have questions about our services or work opportunities? We welcome your inquiry.
             </p>

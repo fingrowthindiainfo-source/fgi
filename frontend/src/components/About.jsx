@@ -34,9 +34,9 @@ const About = () => (
         <div>
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-dark">About Us</p>
-            <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl" data-testid="about-headline">
+            <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl" data-testid="about-headline">
               Growth Begins with the Right Opportunity.
-            </h2>
+            </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 text-base leading-relaxed text-navy/70 md:text-lg">

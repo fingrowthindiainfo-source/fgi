@@ -14,9 +14,9 @@ const StartWork = () => {
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Begin Here</p>
-          <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-testid="start-work-headline">
+          <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-testid="start-work-headline">
             One Short Form. <span className="text-gold-gradient">A World of Possibility.</span>
-          </h2>
+          </h1>
         </Reveal>
 
         <Reveal delay={0.15}>

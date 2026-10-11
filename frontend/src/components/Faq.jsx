@@ -8,9 +8,9 @@ const Faq = () => (
     <div className="relative mx-auto max-w-3xl px-5 lg:px-8">
       <Reveal className="text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">FAQs</p>
-        <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-testid="faq-headline">
+        <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-testid="faq-headline">
           Questions, <span className="text-gold-gradient">Answered Honestly.</span>
-        </h2>
+        </h1>
       </Reveal>
 
       <Reveal delay={0.15}>
