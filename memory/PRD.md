@@ -34,6 +34,10 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 16)
+- Trust strip upgraded to 3 rows with OFFICIAL logos on white cards: Banking Network (HDFC, ICICI, Axis, Bank of Baroda, Canara, Yes Bank — user-supplied list, logos from Wikimedia/Wikipedia official files, ltr) + Trading Platform Network (Zerodha, Upstox, Angel One, rtl) + MSME certifications row (rtl). Logo assets in /assets/partners/
+- Remaining 4 "imp certificates" not added — user never named them; only MSME confirmed
+
 ## Updates (2026-10-11, round 15)
 - Trust strip added above footer on all main pages (via Layout): MSME Registered badges marquee right→left ("Registrations & Certifications"), platform network pills marquee left→right (Zerodha, Upstox, Angel One) — 32s linear loops, hover-pause, reduced-motion safe, ownership disclaimer included
 - Only user-confirmed names used; more certificates/platforms PENDING from user (lists in content.js: CERTIFICATIONS, PLATFORM_NETWORK)

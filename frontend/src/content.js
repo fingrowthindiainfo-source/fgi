@@ -216,4 +216,17 @@ export const CERTIFICATIONS = [
   { name: "MSME", sub: "Registered", note: "Ministry of MSME, Govt. of India" },
 ];
 
-export const PLATFORM_NETWORK = ["Zerodha", "Upstox", "Angel One"];
+export const BANKING_NETWORK = [
+  { name: "HDFC Bank", logo: "/assets/partners/hdfc-bank.png" },
+  { name: "ICICI Bank", logo: "/assets/partners/icici-bank.png" },
+  { name: "Axis Bank", logo: "/assets/partners/axis-bank.png" },
+  { name: "Bank of Baroda", logo: "/assets/partners/bank-of-baroda.png" },
+  { name: "Canara Bank", logo: "/assets/partners/canara-bank.png" },
+  { name: "Yes Bank", logo: "/assets/partners/yes-bank.png" },
+];
+
+export const PLATFORM_NETWORK = [
+  { name: "Zerodha", logo: "/assets/partners/zerodha.png" },
+  { name: "Upstox", logo: "/assets/partners/upstox.png" },
+  { name: "Angel One", logo: "/assets/partners/angel-one.png" },
+];

@@ -1,5 +1,5 @@
-import { BadgeCheck, Handshake } from "lucide-react";
-import { CERTIFICATIONS, PLATFORM_NETWORK } from "@/content";
+import { BadgeCheck, Landmark, CandlestickChart } from "lucide-react";
+import { CERTIFICATIONS, BANKING_NETWORK, PLATFORM_NETWORK } from "@/content";
 
 const MarqueeRow = ({ items, direction, renderItem, label, icon: Icon, testid }) => {
   // Render the list 4 times so a short list still fills the loop seamlessly
@@ -24,6 +24,20 @@ const MarqueeRow = ({ items, direction, renderItem, label, icon: Icon, testid })
     </div>
   );
 };
+
+const LogoChip = ({ item, testid }) => (
+  <div
+    className="flex h-16 items-center justify-center rounded-2xl bg-white px-7 py-3 shadow-[0_6px_20px_rgba(7,20,38,0.35)]"
+    data-testid={testid}
+  >
+    <img
+      src={item.logo}
+      alt={`${item.name} logo`}
+      loading="lazy"
+      className="h-9 w-auto max-w-[150px] object-contain"
+    />
+  </div>
+);
 
 const TrustStrip = () => (
   <section className="border-t border-gold/10 bg-navy py-14" data-testid="trust-strip">
@@ -51,20 +65,23 @@ const TrustStrip = () => (
         )}
       />
       <MarqueeRow
-        items={PLATFORM_NETWORK}
+        items={BANKING_NETWORK}
         direction="ltr"
-        label="Campaign & Platform Network"
-        icon={Handshake}
+        label="Banking Network"
+        icon={Landmark}
+        testid="banking-marquee"
+        renderItem={(bank, i) => (
+          <LogoChip key={i} item={bank} testid={i === 0 ? "banking-chip-first" : undefined} />
+        )}
+      />
+      <MarqueeRow
+        items={PLATFORM_NETWORK}
+        direction="rtl"
+        label="Trading Platform Network"
+        icon={CandlestickChart}
         testid="platforms-marquee"
-        renderItem={(name, i) => (
-          <div
-            key={i}
-            className="flex items-center gap-3 rounded-full border border-ivory/15 bg-royal/30 px-8 py-3.5"
-            data-testid={i === 0 ? "platform-badge-first" : undefined}
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
-            <span className="font-display text-sm font-bold tracking-wide text-ivory">{name}</span>
-          </div>
+        renderItem={(platform, i) => (
+          <LogoChip key={i} item={platform} testid={i === 0 ? "platform-chip-first" : undefined} />
         )}
       />
       <p className="text-center text-[11px] leading-relaxed text-mist/60">
