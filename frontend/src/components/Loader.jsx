@@ -20,18 +20,18 @@ const Loader = ({ onDone }) => {
         className="flex items-center justify-center"
       >
         <img
-          src="/assets/fgi-emblem.jpg"
+          src="/assets/fgi-logo-wide.png"
           alt="Fin Growth India"
-          className="h-28 w-auto rounded-2xl mix-blend-screen drop-shadow-[0_0_40px_rgba(214,181,116,0.25)]"
+          className="h-20 w-auto drop-shadow-[0_0_40px_rgba(214,181,116,0.3)]"
         />
       </motion.div>
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-        className="mt-6 text-xs uppercase tracking-[0.4em] text-mist"
+        className="mt-6 text-xs uppercase tracking-[0.4em] text-gold"
       >
-        Fin Growth India
+        Keep Grow With FinGrow
       </motion.p>
       <motion.div
         initial={{ scaleX: 0 }}

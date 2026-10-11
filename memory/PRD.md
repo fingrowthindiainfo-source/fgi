@@ -34,6 +34,9 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 14)
+- Loading animation now uses the new horizontal transparent logo with "KEEP GROW WITH FINGROW" tagline (was emblem + company name)
+
 ## Updates (2026-10-11, round 13)
 - Established date changed to May 2026 everywhere (site, meta description, JSON-LD foundingDate, llms.txt)
 - Services: added featured 7th card "Vendor & Campaign Partnerships" (vendors connected across campaigns, competitive payouts) + full-width "Your Own Working Dashboard" feature block with branded PIL-generated demo image (/assets/dashboard-demo.jpg, marked Demo Preview)
