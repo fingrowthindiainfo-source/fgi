@@ -1,0 +1,195 @@
+{
+  "theme": "dark",
+  "app_type": "landing_page",
+  "typography": {
+    "headings": {
+      "family": "Manrope",
+      "fallbacks": ["Plus Jakarta Sans", "sans-serif"],
+      "weights": ["400", "500", "700", "800"],
+      "styles": "tracking-tight"
+    },
+    "body": {
+      "family": "Inter",
+      "fallbacks": ["sans-serif"],
+      "weights": ["400", "500"],
+      "styles": "leading-relaxed"
+    }
+  },
+  "colors": {
+    "primary": {
+      "name": "Midnight Navy",
+      "hex": "#071426",
+      "usage": "Background dominant, main structural element."
+    },
+    "secondary": {
+      "name": "Deep Royal Blue",
+      "hex": "#102B4E",
+      "usage": "Cards, sections, slight elevation above primary."
+    },
+    "accent": {
+      "name": "Champagne Gold",
+      "hex": "#D6B574",
+      "usage": "CTAs, borders, subtle highlights, custom cursor."
+    },
+    "contrast": {
+      "name": "Warm Ivory",
+      "hex": "#F7F4ED",
+      "usage": "Contrast sections, typography on dark backgrounds."
+    },
+    "neutral": {
+      "name": "Muted Slate",
+      "hex": "#A8B3C5",
+      "usage": "Secondary text, muted borders, subtle UI elements."
+    },
+    "white": {
+      "name": "Pure White",
+      "hex": "#FFFFFF",
+      "usage": "Primary text on dark backgrounds."
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "Restrained use. `backdrop-blur-xl bg-[#102B4E]/60 border border-[#D6B574]/20` for sticky headers and elevated cards. Never fully transparent.",
+    "borders": "Fine gold borders (`border-[#D6B574]/20` or `border-[#D6B574]/40`).",
+    "shadows": "Sophisticated ambient shadows. `shadow-[0_8px_32px_rgba(7,20,38,0.5)]` with slight gold inner glow.",
+    "cursor": "Custom cursor on desktop: small circular outline with a solid gold dot inside (`#D6B574`), tracking mouse movement.",
+    "gradients": "Elegant, restrained gradients. No full-screen neon. `bg-gradient-to-br from-[#071426] to-[#102B4E]`.",
+    "loading": "Premium loading animation with FGI monogram (stylized initials 'FGI' with a gold shimmer effect)."
+  },
+  "grids_and_layouts": {
+    "spacing_system": "Generous whitespace. Use `py-24` or `py-32` for sections, `gap-8` to `gap-12` in grids.",
+    "services_grid": "6 cards: 3-column grid on desktop (`grid-cols-1 md:grid-cols-2 lg:grid-cols-3`).",
+    "audience_cards": "4 flip cards: 2-column or 4-column grid (`grid-cols-1 md:grid-cols-2 lg:grid-cols-4`).",
+    "timeline_steps": "6-step timeline for 'How It Works', alternating layout on desktop."
+  },
+  "motion": {
+    "transitions": "Smooth section reveals on scroll (`framer-motion` initial opacity 0, y 20).",
+    "hover_states": "Cards lift slightly (`-translate-y-2`) with increased shadow and gold border opacity.",
+    "flip_cards": "CSS 3D transform (`rotateY(180deg)`) triggered on click with 700-900ms duration. Must preserve 3D (`transform-style: preserve-3d`).",
+    "reduced_motion": "Respect `prefers-reduced-motion` media query for all Framer Motion and CSS animations."
+  },
+  "accessibility": {
+    "contrast": "Ensure text against Midnight Navy meets APCA/WCAG standards.",
+    "focus_states": "Gold outline (`ring-2 ring-[#D6B574] ring-offset-2 ring-offset-[#071426]`).",
+    "aria": "Use `aria-hidden` on decorative 3D elements and flip card backfaces when not flipped."
+  },
+  "image_urls": [
+    {
+      "category": "hero_background",
+      "description": "Abstract 3D glass and finance imagery with blue and clear parallel tubes.",
+      "image_url": "https://images.unsplash.com/photo-1782511784150-09acb92873cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMDNkJTIwZ2xhc3MlMjBibHVlJTIwZ29sZHxlbnwwfHx8fDE3OTE2OTkxMzJ8MA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "audience_student",
+      "description": "Young Indian student sitting with a laptop.",
+      "image_url": "https://images.unsplash.com/photo-1637589308599-3478cc55510d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwyfHx5b3VuZyUyMGluZGlhbiUyMHN0dWRlbnQlMjBsYXB0b3B8ZW58MHx8fHwxNzkxNjk5MTMxfDA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "audience_homemaker",
+      "description": "Indian woman sitting in a casual outdoor setting.",
+      "image_url": "https://images.unsplash.com/photo-1604177091072-b7b677a077f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMGluZGlhbiUyMHN0dWRlbnQlMjBsYXB0b3B8ZW58MHx8fHwxNzkxNjk5MTMxfDA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "audience_fresher",
+      "description": "Clean-cut Indian man with eyeglasses and crossed arms.",
+      "image_url": "https://images.unsplash.com/photo-1616434116710-c45ce99c1a77?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwyfHxjb25maWRlbnQlMjBpbmRpYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzkxNjk5MTMxfDA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "category": "audience_professional",
+      "description": "Confident Indian professional man in a black suit smiling.",
+      "image_url": "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwxfHxjb25maWRlbnQlMjBpbmRpYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzkxNjk5MTMxfDA&ixlib=rb-4.1.0&q=85"
+    }
+  ],
+  "components_needed": [
+    "Sticky Navbar (with active state & mobile menu)",
+    "Framer Motion Section Wrappers",
+    "Flip Card (CSS 3D, click to flip)",
+    "Signature Inquiry Flip Card (5-field form, validation)",
+    "FAQ Accordion (Shadcn UI based)",
+    "Floating Action Buttons (WhatsApp & Phone)",
+    "Custom Cursor Component",
+    "Premium Loading Screen"
+  ],
+  "build_manifest": {
+    "conversion_wiring": {
+      "primary_action": "inquiry_form",
+      "action_trigger": "Signature 'Start Your Work' flip card front face click.",
+      "form_fields": [
+        "Full Name",
+        "City",
+        "Email",
+        "Phone (+91)",
+        "Age (18+) validation"
+      ],
+      "form_submission": "Email sent to fingrowthindia.info@gmail.com via Resend. Show loading/success/error states within the card.",
+      "secondary_actions": {
+        "whatsapp": "https://wa.me/919785868775",
+        "phone": "tel:+919785868775",
+        "email": "mailto:fingrowthindia.info@gmail.com"
+      }
+    },
+    "fabrication_guardrails": [
+      "NO fake salary figures or income promises.",
+      "NO fake awards, press mentions, or certifications.",
+      "NO fake testimonials or client names.",
+      "DO NOT invent any leadership names (Use exactly: Vikram Nehra, Arsh Preet Singh, Tannu Sharma).",
+      "DO NOT use fake photos for leadership. Use tasteful abstract/initial-based placeholders."
+    ],
+    "content_slots": [
+      {
+        "slot": "hero_headline",
+        "text": "Your Ambition. Our Opportunity. A Future of Growth.",
+        "source": "brief"
+      },
+      {
+        "slot": "hero_label",
+        "text": "FIN GROWTH INDIA · YOUR GROWTH PARTNER",
+        "source": "brief"
+      },
+      {
+        "slot": "about_headline",
+        "text": "Growth Begins with the Right Opportunity.",
+        "source": "brief"
+      },
+      {
+        "slot": "audience_headline",
+        "text": "Your Journey. Your Schedule. Your Opportunity.",
+        "source": "brief"
+      },
+      {
+        "slot": "signature_card_front",
+        "text": "Ready to Take Your Next Step?",
+        "source": "brief"
+      },
+      {
+        "slot": "contact_address",
+        "text": "Mansarovar, Jaipur 302020",
+        "source": "brief"
+      },
+      {
+        "slot": "contact_email",
+        "text": "fingrowthindia.info@gmail.com",
+        "source": "brief"
+      },
+      {
+        "slot": "contact_phone",
+        "text": "+91 9785868775",
+        "source": "brief"
+      }
+    ],
+    "locale": {
+      "language": "en",
+      "region": "IN",
+      "currency_format": "INR"
+    }
+  },
+  "GENERAL_UI_UX_DESIGN_GUIDELINES": [
+    "Use Framer Motion for section reveals, but keep them professional and smooth. No bouncy or jarring animations.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "DO NOT apply universal transition like `transition: all`.",
+    "DO NOT center align the app container in the css file.",
+    "All interactive and key informational elements MUST include a `data-testid` attribute for testing.",
+    "Ensure the hero CTA 'Start Your Work' smooth-scrolls to the Signature Flip Card and automatically flips it to the form.",
+    "Use Lucide-React or Phosphor Icons for professional minimal iconography."
+  ],
+  "instructions_to_main_agent": "Implement a single-page React/Vite/Tailwind app with the sections listed in the problem statement. Follow the exact color hex codes provided. Create custom components for the 3D CSS flip cards. Use Resend logic in the background if possible, but mock the frontend states perfectly. Respect the constraints of no fake data. Build the 'Privacy Policy', 'Terms', and '404' as simple route pages. Use `react-router-dom` for the multi-page feel despite being primarily a SPA landing page. Add the custom cursor script or component. DO NOT use complete `transparent` background in header, overlays, any surface that has content under it."
+}

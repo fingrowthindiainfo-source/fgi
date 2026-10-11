@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 216 69% 9%;
+        --foreground: 44 33% 95%;
+        --card: 214 66% 19%;
+        --card-foreground: 44 33% 95%;
+        --popover: 214 66% 19%;
+        --popover-foreground: 44 33% 95%;
+        --primary: 38 52% 65%;
+        --primary-foreground: 216 69% 9%;
+        --secondary: 214 66% 19%;
+        --secondary-foreground: 44 33% 95%;
+        --muted: 214 40% 25%;
+        --muted-foreground: 217 22% 72%;
+        --accent: 38 52% 65%;
+        --accent-foreground: 216 69% 9%;
+        --destructive: 0 72% 55%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 214 40% 26%;
+        --input: 214 40% 30%;
+        --ring: 38 52% 65%;
+        --radius: 0.75rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply bg-navy text-ivory font-body antialiased;
+    }
+    ::selection {
+        background-color: #d6b574;
+        color: #071426;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
+
+@layer utilities {
+    .perspective-1400 {
+        perspective: 1400px;
+    }
+    .preserve-3d {
+        transform-style: preserve-3d;
+    }
+    .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+        transform: rotateY(180deg);
+    }
+    .hero-grid {
+        background-image:
+            linear-gradient(rgba(214, 181, 116, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(214, 181, 116, 0.05) 1px, transparent 1px);
+        background-size: 56px 56px;
+    }
+    .text-gold-gradient {
+        background: linear-gradient(100deg, #b8955a 0%, #e8d5a8 45%, #d6b574 70%, #b8955a 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+        background: rgba(16, 43, 78, 0.55);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border: 1px solid rgba(214, 181, 116, 0.18);
+    }
+    .gold-ring-focus:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 2px #071426, 0 0 0 4px #d6b574;
+    }
+}
+
+/* Custom cursor */
+.custom-cursor-dot,
+.custom-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 9999px;
+    transform: translate(-50%, -50%);
+}
+.custom-cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #d6b574;
+}
+.custom-cursor-ring {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(214, 181, 116, 0.55);
+    transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+.custom-cursor-ring.is-active {
+    width: 52px;
+    height: 52px;
+    border-color: rgba(214, 181, 116, 0.9);
+    background-color: rgba(214, 181, 116, 0.08);
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+    .custom-cursor-dot,
+    .custom-cursor-ring {
+        display: none;
+    }
+}
+
+/* Thin elegant scrollbar for the flip-card form */
+.thin-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+.thin-scroll::-webkit-scrollbar-track {
+    background: rgba(16, 43, 78, 0.4);
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+    background: rgba(214, 181, 116, 0.4);
+    border-radius: 9999px;
+}

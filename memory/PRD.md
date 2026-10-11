@@ -1,0 +1,44 @@
+# Fin Growth India (FGI) — Premium Website — PRD
+
+## Original Problem Statement
+Build a complete, premium, luxury-style website for Fin Growth India (FGI), an Indian financial-services & business-support company (est. May 2022, Mansarovar, Jaipur). Midnight navy + champagne gold luxury aesthetic, Manrope/Inter typography, animated single-page site with interactive 3D-flip audience cards, a signature "Start Your Work" flip card containing a 5-field inquiry form (Full Name, City, Email, Phone +91, Age 18+), email notifications via Resend (no database), floating WhatsApp + call buttons (+91 9785868775), Privacy/Terms/404 pages, SEO metadata, custom cursor, responsive + accessible.
+
+## User Decisions (discovery answers)
+- Inquiry emails delivered to: fingrowthindia.info@gmail.com
+- No applicant confirmation email (internal notification only)
+- Contact email: fingrowthindia.info@gmail.com; phone: +91 9785868775
+- Floating WhatsApp button (wa.me/919785868775) + call button (tel:+919785868775)
+- Nothing extra beyond brief: no salary figures, awards, or invented claims
+- Logo + leadership photos: user said "will upload" but no assets arrived → elegant placeholders built, clearly marked for swap
+
+## Architecture
+- Frontend: React (CRA/craco) + Tailwind + Framer Motion + lucide-react; SPA with react-router (/, /privacy-policy, /terms-and-conditions, 404)
+- Backend: FastAPI — POST /api/inquiry (validation, in-memory rate limit 5/10min/IP, no DB), email via Emergent-managed Resend proxy (httpx async, guardrail gate, HTML email with IST timestamp)
+- No database used anywhere for inquiries (Mongo env keys preserved but unused)
+
+## Implemented (2026-10-11)
+- Sticky navbar: blur on scroll, active-section indicator, mobile menu, gold Start Your Work CTA
+- Hero: full-screen navy, grid, glass shapes, gold-gradient headline, entrance animations
+- About (company card + 3 features + mission/vision), Services (6 luxury cards)
+- Opportunities: 4 CSS-3D flip audience cards (tilt on mouse, tap on mobile, keyboard accessible)
+- Signature flip card: rotateY 850ms, 5-field form (client + server validation, +91 prefix, 18+ age gate, loading/success/error states, privacy note)
+- Email pipeline verified end-to-end (real send accepted by Resend proxy)
+- How It Works (6-step alternating timeline), Benefits (6 cards), Eligibility + sensitive-documents note
+- Leadership: Vikram Nehra / Arsh Preet Singh / Tannu Sharma with monogram portrait placeholders
+- FAQ accordion (10 Qs, shadcn), compensation transparency note
+- Contact (address/email/phone/WhatsApp), footer with disclaimers + dynamic year
+- Custom cursor (desktop only, reduced-motion aware), FGI monogram loader, floating WhatsApp/call buttons
+- SEO: title, meta description, OG/Twitter tags, dynamic canonical, Organization JSON-LD, SVG monogram favicon
+
+## Tested
+- API: health, invalid phone/email/age rejection, valid submission → email sent
+- E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
+
+## Pending From User
+- Official FGI logo file (placeholder in src/components/Logo.jsx — swap marked)
+- Leadership photographs (monogram placeholders in src/components/Leadership.jsx — swap marked)
+
+## Backlog
+- P1: Wire in official logo + leadership photos when supplied
+- P2: Custom domain deployment (Vercel) + canonical/OG URL confirmation
+- P2: Optional applicant confirmation email (template ready in brief, currently disabled per user choice)
