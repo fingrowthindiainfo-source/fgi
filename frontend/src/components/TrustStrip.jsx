@@ -39,6 +39,21 @@ const LogoChip = ({ item, testid }) => (
   </div>
 );
 
+const CertChip = ({ cert, testid }) => (
+  <div
+    className="flex flex-col items-center justify-center gap-1.5 rounded-2xl bg-white px-7 py-3.5 shadow-[0_6px_20px_rgba(7,20,38,0.35)]"
+    data-testid={testid}
+  >
+    <img
+      src={cert.logo}
+      alt={`${cert.name} logo`}
+      loading="lazy"
+      className="h-10 w-auto max-w-[130px] object-contain"
+    />
+    <p className="text-[10px] font-bold tracking-wide text-navy/80">{cert.name}</p>
+  </div>
+);
+
 const TrustStrip = () => (
   <section className="border-t border-gold/10 bg-navy py-14" data-testid="trust-strip">
     <div className="mx-auto max-w-7xl space-y-10 px-5 lg:px-8">
@@ -49,19 +64,7 @@ const TrustStrip = () => (
         icon={BadgeCheck}
         testid="certifications-marquee"
         renderItem={(cert, i) => (
-          <div
-            key={i}
-            className="flex items-center gap-3.5 rounded-2xl border border-gold/25 bg-royal/40 px-7 py-4 backdrop-blur-sm"
-            data-testid={i === 0 ? "cert-badge-msme" : undefined}
-          >
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-gold/40 bg-navy/70 font-display text-xs font-extrabold tracking-wide text-gold">
-              {cert.name}
-            </div>
-            <div className="text-left">
-              <p className="font-display text-sm font-bold text-white">{cert.name} {cert.sub}</p>
-              <p className="text-[11px] text-mist">{cert.note}</p>
-            </div>
-          </div>
+          <CertChip key={i} cert={cert} testid={i === 0 ? "cert-chip-first" : undefined} />
         )}
       />
       <MarqueeRow

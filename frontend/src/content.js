@@ -211,9 +211,11 @@ export const REVIEWS = [
   },
 ];
 
-// Only registrations/partnerships explicitly confirmed by the company are listed here.
+// Only registrations/associations explicitly confirmed by the company are listed here.
 export const CERTIFICATIONS = [
-  { name: "MSME", sub: "Registered", note: "Ministry of MSME, Govt. of India" },
+  { name: "MSME Registered", caption: "Ministry of MSME, Govt. of India", logo: "/assets/partners/msme.png" },
+  { name: "Aadhaar Enabled KYC", caption: "UIDAI", logo: "/assets/partners/aadhaar.png" },
+  { name: "Digital India", caption: "Power to Empower", logo: "/assets/partners/digital-india.png" },
 ];
 
 export const BANKING_NETWORK = [

@@ -34,6 +34,11 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 17)
+- Certifications row now shows official govt logos on white chips: MSME Registered (ministry seal), Aadhaar Enabled KYC (UIDAI), Digital India — all from official Wikimedia files
+- NOT added: "Bharat Sarkar / Government of India" National Emblem — statutory restriction (State Emblem of India Act 2005), illegal for private websites
+- Reviews: user again asked for self-written reviews — declined fabricated testimonials; offered to polish real participant quotes (name + gist in any language)
+
 ## Updates (2026-10-11, round 16)
 - Trust strip upgraded to 3 rows with OFFICIAL logos on white cards: Banking Network (HDFC, ICICI, Axis, Bank of Baroda, Canara, Yes Bank — user-supplied list, logos from Wikimedia/Wikipedia official files, ltr) + Trading Platform Network (Zerodha, Upstox, Angel One, rtl) + MSME certifications row (rtl). Logo assets in /assets/partners/
 - Remaining 4 "imp certificates" not added — user never named them; only MSME confirmed
