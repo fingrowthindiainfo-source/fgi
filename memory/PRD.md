@@ -34,6 +34,9 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 9)
+- Founder photo wired in: Vikram Nehra (user-supplied, 560×560 portrait) — Leadership section is now complete with all three real photos, no placeholders remain
+
 ## Updates (2026-10-11, round 8)
 - Unified motion signature: shared MOTION_EASE [0.65,0,0.35,1] exported from Reveal.jsx; all scroll reveals now 1.05s and hero entrances 1.0-1.05s on the same curve as the card flips
 

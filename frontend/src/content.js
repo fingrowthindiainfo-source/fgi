@@ -134,7 +134,7 @@ export const ELIGIBILITY = [
 ];
 
 export const LEADERS = [
-  { name: "Vikram Nehra", role: "Founder & Owner", location: "Jaipur, Rajasthan", initials: "VN" },
+  { name: "Vikram Nehra", role: "Founder & Owner", location: "Jaipur, Rajasthan", initials: "VN", image: "/assets/team/vikram-nehra.jpg" },
   { name: "Arsh Preet Singh", role: "Co-Founder", location: "Lucknow, Uttar Pradesh", initials: "AS", image: "/assets/team/arsh-preet-singh.jpg" },
   { name: "Tannu Sharma", role: "Co-Founder", location: "Kolkata, West Bengal", initials: "TS", image: "/assets/team/tannu-sharma.jpg" },
 ];
