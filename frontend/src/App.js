@@ -29,6 +29,23 @@ const ScrollAndMeta = () => {
       document.head.appendChild(link);
     }
     link.setAttribute("href", window.location.origin + pathname);
+    // Share-card image follows whatever domain serves the app (absolute URL required by scrapers)
+    const ogImage = window.location.origin + "/assets/og-image.jpg";
+    const setMeta = (selector, value) => {
+      let el = document.querySelector(selector);
+      if (!el) {
+        el = document.createElement("meta");
+        if (selector.includes("property=")) {
+          el.setAttribute("property", "og:image");
+        } else {
+          el.setAttribute("name", "twitter:image");
+        }
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", value);
+    };
+    setMeta("meta[property='og:image']", ogImage);
+    setMeta("meta[name='twitter:image']", ogImage);
   }, [pathname]);
   return null;
 };

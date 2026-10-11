@@ -34,6 +34,10 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 6)
+- Leadership photos wired in: Arsh Preet Singh + Tannu Sharma (user-supplied, cropped to 560×560 portraits at /assets/team/); Vikram Nehra still monogram placeholder
+- 1200×630 branded OG share image created (/assets/og-image.jpg — navy bg, FGI emblem, brand name, tagline); og:image + twitter:image set at runtime from the serving origin (self-adapts to any domain), og:image:width/height/alt in static head; verified serving 200
+
 ## Updates (2026-10-11, round 5 — SEO skill pass)
 - robots.txt in public/ (allow all, Disallow /api/, explicit AI-crawler group: Googlebot, Bingbot, GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, Claude-SearchBot, PerplexityBot, Google-Extended, Applebot(-Extended), meta-externalagent, facebookexternalhit, Twitterbot, Amazonbot, CCBot) — verified served as text/plain, not SPA shell
 - llms.txt in public/ (site summary, page list, confirmed contact facts only)

@@ -24,12 +24,22 @@ const Leadership = () => (
               data-testid={`leader-card-${i + 1}`}
             >
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" aria-hidden="true" />
-              {/* PORTRAIT PLACEHOLDER: replace this monogram block with an approved
-                  photograph, e.g. <img src="/team/vikram.jpg" alt="Vikram Nehra" className="h-28 w-28 rounded-full object-cover mx-auto" /> */}
-              <div className="relative mx-auto flex h-28 w-28 items-center justify-center rounded-full border-2 border-gold/50 bg-navy shadow-[0_0_36px_rgba(214,181,116,0.18)]">
-                <span className="font-display text-2xl font-extrabold tracking-widest text-gold">{leader.initials}</span>
-                <div className="absolute inset-0 rounded-full border border-gold/20" aria-hidden="true" />
-              </div>
+              {leader.image ? (
+                <img
+                  src={leader.image}
+                  alt={`${leader.name}, ${leader.role} of Fin Growth India`}
+                  loading="lazy"
+                  className="mx-auto h-28 w-28 rounded-full border-2 border-gold/50 object-cover shadow-[0_0_36px_rgba(214,181,116,0.18)]"
+                  data-testid={`leader-photo-${i + 1}`}
+                />
+              ) : (
+                /* PORTRAIT PLACEHOLDER: replace this monogram block with an approved
+                   photograph by adding an image path in LEADERS (src/content.js) */
+                <div className="relative mx-auto flex h-28 w-28 items-center justify-center rounded-full border-2 border-gold/50 bg-navy shadow-[0_0_36px_rgba(214,181,116,0.18)]">
+                  <span className="font-display text-2xl font-extrabold tracking-widest text-gold">{leader.initials}</span>
+                  <div className="absolute inset-0 rounded-full border border-gold/20" aria-hidden="true" />
+                </div>
+              )}
               <h3 className="mt-6 font-display text-xl font-bold text-white" data-testid={`leader-name-${i + 1}`}>{leader.name}</h3>
               <p className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-gold">{leader.role}</p>
               <p className="mt-3 inline-flex items-center gap-1.5 text-sm text-mist">
