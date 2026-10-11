@@ -34,6 +34,9 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 11)
+- Applicant confirmation email DISABLED per user request (both /app/backend/server.py and /app/frontend/api/inquiry.py): visitor sees only the on-site success popup; inquiry details go ONLY to fingrowthindia.info@gmail.com. Verified in logs — single send per inquiry.
+
 ## Updates (2026-10-11, round 10 — Vercel prep)
 - Direct Resend serverless function for Vercel: /app/frontend/api/inquiry.py (FastAPI/ASGI, same 5-field validation, premium HTML + plain-text emails, notification + applicant confirmation, NO database)
 - /app/frontend/requirements.txt (fastapi, pydantic[email], resend) + vercel.json (SPA rewrites, /api/* → function)

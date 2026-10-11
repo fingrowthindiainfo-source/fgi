@@ -66,9 +66,9 @@ curl -i -X POST https://yourdomain.in/api/inquiry \
   -d '{"full_name":"Deploy Test","city":"Jaipur","email":"you@example.com","phone":"9785868775","age":30}'
 ```
 
-Expect `200 {"status":"success", ...}`, one notification in your Gmail, and one
-confirmation at the applicant address. Invalid data (bad phone, age under 18)
-must return `422` with a clear message.
+Expect `200 {"status":"success", ...}` with one notification in your Gmail.
+The applicant receives no email — they only see the on-site success message.
+Invalid data (bad phone, age under 18) must return `422` with a clear message.
 
 ## Notes
 
