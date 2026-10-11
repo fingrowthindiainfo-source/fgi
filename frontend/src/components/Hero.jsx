@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, ChevronDown, Sparkles } from "lucide-react";
 import { IMAGES } from "@/content";
+import { MOTION_EASE } from "@/components/Reveal";
 import { useInquiry } from "@/context/InquiryContext";
 
 const Hero = () => {
@@ -37,7 +38,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.0, delay: 0.15, ease: MOTION_EASE }}
           className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-royal/40 px-4 py-2 backdrop-blur-md"
           data-testid="hero-label"
         >
@@ -50,7 +51,7 @@ const Hero = () => {
         <motion.h1
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.05, delay: 0.3, ease: MOTION_EASE }}
           className="mt-8 max-w-4xl font-display text-4xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-7xl"
           data-testid="hero-headline"
         >
@@ -63,7 +64,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.05, delay: 0.45, ease: MOTION_EASE }}
           className="mt-6 max-w-xl text-base leading-relaxed text-mist md:text-lg"
           data-testid="hero-subtext"
         >
@@ -73,7 +74,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.05, delay: 0.6, ease: MOTION_EASE }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
           <button
@@ -98,7 +99,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.8 }}
+          transition={{ delay: 1.2, duration: 1.0, ease: MOTION_EASE }}
           className="mt-20 flex items-center gap-3 text-mist/70"
           aria-hidden="true"
         >

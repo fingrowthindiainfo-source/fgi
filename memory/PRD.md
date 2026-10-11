@@ -34,6 +34,9 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 8)
+- Unified motion signature: shared MOTION_EASE [0.65,0,0.35,1] exported from Reveal.jsx; all scroll reveals now 1.05s and hero entrances 1.0-1.05s on the same curve as the card flips
+
 ## Updates (2026-10-11, round 7)
 - Card flips retimed for a premium feel: audience cards 1150ms, signature card 1200ms, both on an even ease-in-out curve (0.65,0,0.35,1); mouse-tilt moved to its own layer so flips stay slow while tilt stays responsive
 - Signature card front now uses the real FGI emblem instead of the monogram badge
