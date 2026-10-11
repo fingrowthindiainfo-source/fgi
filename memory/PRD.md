@@ -34,6 +34,9 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 20)
+- Co-founder photos replaced with new professional portraits (user-supplied): Arsh Preet Singh (turban portrait) + Tannu Sharma (blazer portrait) — identity verified before assignment
+
 ## Updates (2026-10-11, round 19)
 - Leadership redesigned: large featured Founder card (new office photo with FGI wall branding) on top with tagline "Trader & Investor — Expertise Across All Financial Sectors"; co-founders in smaller cards below. New asset: /assets/team/vikram-nehra-featured.jpg
 
