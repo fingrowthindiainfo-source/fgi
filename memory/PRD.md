@@ -34,6 +34,13 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 10 — Vercel prep)
+- Direct Resend serverless function for Vercel: /app/frontend/api/inquiry.py (FastAPI/ASGI, same 5-field validation, premium HTML + plain-text emails, notification + applicant confirmation, NO database)
+- /app/frontend/requirements.txt (fastapi, pydantic[email], resend) + vercel.json (SPA rewrites, /api/* → function)
+- InquiryForm API base now falls back to same-origin /api when REACT_APP_BACKEND_URL is unset (Vercel); Emergent preview unchanged (managed email, verified still working)
+- .gitignore now blocks all .env files; /app/DEPLOYMENT.md has full Vercel + Resend setup steps
+- Pending from user: Resend account, verified sending domain, RESEND_API_KEY → set as Vercel env vars (never REACT_APP_*)
+
 ## Updates (2026-10-11, round 9)
 - Founder photo wired in: Vikram Nehra (user-supplied, 560×560 portrait) — Leadership section is now complete with all three real photos, no placeholders remain
 

@@ -3,7 +3,8 @@ import axios from "axios";
 import { CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+// On Vercel this env is unset, so the form calls the same-origin /api serverless function.
+const API = `${process.env.REACT_APP_BACKEND_URL || ""}/api`;
 
 const INITIAL = { fullName: "", city: "", email: "", phone: "", age: "" };
 
