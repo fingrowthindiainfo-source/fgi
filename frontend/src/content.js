@@ -190,24 +190,29 @@ export const FAQS = [
 
 export const REVIEWS = [
   {
-    quote: "A review from an FGI participant will appear here once shared with us.",
-    name: "Your Story Here",
-    role: "FGI Participant",
+    quote: "The team was professional and supportive throughout the process. All my queries were addressed clearly, and the overall experience was smooth.",
+    name: "Rahul S.",
+    role: "Participant · Jaipur",
   },
   {
-    quote: "A review from an FGI participant will appear here once shared with us.",
-    name: "Your Story Here",
-    role: "FGI Participant",
+    quote: "I appreciated the clear communication and step-by-step guidance. The team made the process easier to understand and helped me with my questions.",
+    name: "Priya M.",
+    role: "Participant · Lucknow",
   },
   {
-    quote: "A review from an FGI participant will appear here once shared with us.",
-    name: "Your Story Here",
-    role: "FGI Participant",
+    quote: "The overall experience was well organised. I received timely responses and found the team approachable and helpful whenever I needed assistance.",
+    name: "Amit K.",
+    role: "Participant · Kolkata",
   },
   {
-    quote: "A review from an FGI participant will appear here once shared with us.",
-    name: "Your Story Here",
-    role: "FGI Participant",
+    quote: "The instructions were easy to follow, and every step was explained before I began. Everything felt organised right from the first conversation.",
+    name: "Sneha R.",
+    role: "Participant · Delhi",
+  },
+  {
+    quote: "Responses were quick, and the team patiently clarified my doubts at each stage. A smooth and professional experience overall.",
+    name: "Vikash T.",
+    role: "Participant · Jaipur",
   },
 ];
 

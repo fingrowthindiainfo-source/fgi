@@ -16,9 +16,9 @@ const Reviews = () => (
         </p>
       </Reveal>
 
-      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {REVIEWS.map((review, i) => (
-          <Reveal key={i} delay={0.08 * (i % 4)}>
+          <Reveal key={i} delay={0.08 * (i % 3)}>
             <figure
               className="flex h-full flex-col rounded-2xl border border-ivory/10 bg-royal/30 p-6 transition-[transform,border-color,background-color] duration-500 hover:-translate-y-1.5 hover:border-gold/35 hover:bg-royal/50"
               data-testid={`review-card-${i + 1}`}
@@ -45,7 +45,7 @@ const Reviews = () => (
 
       <Reveal delay={0.2}>
         <p className="mt-8 text-center text-xs text-mist/70" data-testid="reviews-note">
-          Genuine participant reviews are published here as they are received.
+          Participant reviews are published here as they are received. Names are abbreviated for privacy.
         </p>
       </Reveal>
     </div>
