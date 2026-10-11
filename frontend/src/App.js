@@ -5,6 +5,14 @@ import { InquiryProvider } from "@/context/InquiryContext";
 import Loader from "@/components/Loader";
 import CustomCursor from "@/components/CustomCursor";
 import Home from "@/pages/Home";
+import AboutPage from "@/pages/AboutPage";
+import ServicesPage from "@/pages/ServicesPage";
+import OpportunitiesPage from "@/pages/OpportunitiesPage";
+import HowItWorksPage from "@/pages/HowItWorksPage";
+import LeadershipPage from "@/pages/LeadershipPage";
+import FaqPage from "@/pages/FaqPage";
+import ContactPage from "@/pages/ContactPage";
+import StartWorkPage from "@/pages/StartWorkPage";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import Terms from "@/pages/Terms";
 import NotFound from "@/pages/NotFound";
@@ -58,17 +66,25 @@ function App() {
     <div className="App bg-navy min-h-screen">
       {loading && <Loader onDone={() => setLoading(false)} />}
       <CustomCursor />
-      <InquiryProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <InquiryProvider>
           <ScrollAndMeta />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/opportunities" element={<OpportunitiesPage />} />
+            <Route path="/how-it-works" element={<HowItWorksPage />} />
+            <Route path="/leadership" element={<LeadershipPage />} />
+            <Route path="/faqs" element={<FaqPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/start-work" element={<StartWorkPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<Terms />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
-      </InquiryProvider>
+        </InquiryProvider>
+      </BrowserRouter>
     </div>
   );
 }

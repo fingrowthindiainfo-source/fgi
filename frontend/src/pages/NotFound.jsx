@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Logo from "@/components/Logo";
+import useTitle from "@/hooks/useTitle";
 
-const NotFound = () => (
+const NotFound = () => {
+  useTitle("Page Not Found | Fin Growth India");
+  return (
   <div className="hero-grid flex min-h-screen flex-col items-center justify-center bg-navy px-5 text-center" data-testid="not-found-page">
     <Logo />
     <p className="mt-12 font-display text-7xl font-extrabold text-gold-gradient sm:text-8xl">404</p>
@@ -19,6 +22,7 @@ const NotFound = () => (
       Back to Home
     </Link>
   </div>
-);
+  );
+};
 
 export default NotFound;

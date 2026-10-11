@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { ArrowRight, ChevronDown, Sparkles } from "lucide-react";
 import { IMAGES } from "@/content";
 import { useInquiry } from "@/context/InquiryContext";
 
 const Hero = () => {
   const { openInquiry } = useInquiry();
+  const navigate = useNavigate();
 
   const scrollToOpportunities = () => {
-    document.getElementById("opportunities")?.scrollIntoView({ behavior: "smooth" });
+    navigate("/opportunities");
   };
 
   return (

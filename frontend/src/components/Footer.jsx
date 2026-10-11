@@ -7,13 +7,6 @@ const Footer = () => {
   const year = new Date().getFullYear();
   const { openInquiry } = useInquiry();
 
-  const goTo = (e, href) => {
-    if (window.location.pathname === "/") {
-      e.preventDefault();
-      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <footer className="border-t border-gold/15 bg-navy" data-testid="site-footer">
       <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
@@ -30,15 +23,14 @@ const Footer = () => {
             <h3 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-white">Quick Links</h3>
             <ul className="mt-5 space-y-2.5">
               {NAV_LINKS.slice(1, 6).map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => goTo(e, link.href)}
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
                     className="gold-ring-focus rounded text-sm text-mist transition-colors duration-300 hover:text-gold"
-                    data-testid={`footer-link-${link.href.slice(1)}`}
+                    data-testid={`footer-link-${link.path.slice(1)}`}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

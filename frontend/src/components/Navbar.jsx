@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/content";
 import { useInquiry } from "@/context/InquiryContext";
@@ -8,9 +8,8 @@ import Logo from "@/components/Logo";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("home");
   const { openInquiry } = useInquiry();
-  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -20,67 +19,44 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const ids = NAV_LINKS.map((l) => l.href.slice(1));
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { rootMargin: "-40% 0px -55% 0px" }
-    );
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
-  }, []);
-
-  const goTo = (e, href) => {
-    e.preventDefault();
     setOpen(false);
-    if (window.location.pathname !== "/") {
-      navigate("/");
-      window.setTimeout(() => {
-        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-      }, 350);
-    } else {
-      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  }, [location.pathname]);
+
+  const isActive = (path) =>
+    path === "/" ? location.pathname === "/" : location.pathname.startsWith(path);
 
   return (
     <header
       data-testid="main-navbar"
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,border-color] duration-500 ${
-        scrolled
+        scrolled || location.pathname !== "/"
           ? "border-b border-gold/15 bg-navy/85 shadow-[0_8px_32px_rgba(7,20,38,0.5)] backdrop-blur-xl"
           : "border-b border-transparent bg-navy/40 backdrop-blur-sm"
       }`}
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8" aria-label="Main navigation">
-        <Link to="/" onClick={(e) => goTo(e, "#home")} aria-label="Fin Growth India — home" className="gold-ring-focus rounded-lg">
+        <Link to="/" aria-label="Fin Growth India — home" className="gold-ring-focus rounded-lg" data-testid="nav-logo-link">
           <Logo />
         </Link>
 
         <ul className="hidden items-center gap-7 xl:flex">
           {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={(e) => goTo(e, link.href)}
-                data-testid={`nav-link-${link.href.slice(1)}`}
+            <li key={link.path}>
+              <Link
+                to={link.path}
+                data-testid={`nav-link-${link.path === "/" ? "home" : link.path.slice(1)}`}
+                aria-current={isActive(link.path) ? "page" : undefined}
                 className={`gold-ring-focus relative rounded px-1 py-2 text-[13px] font-medium tracking-wide transition-colors duration-300 ${
-                  active === link.href.slice(1) ? "text-gold" : "text-ivory/80 hover:text-white"
+                  isActive(link.path) ? "text-gold" : "text-ivory/80 hover:text-white"
                 }`}
               >
                 {link.label}
                 <span
                   className={`absolute -bottom-0.5 left-0 h-px bg-gold transition-[width] duration-300 ${
-                    active === link.href.slice(1) ? "w-full" : "w-0"
+                    isActive(link.path) ? "w-full" : "w-0"
                   }`}
                 />
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -115,17 +91,16 @@ const Navbar = () => {
       >
         <ul className="space-y-1 px-6 py-4">
           {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={(e) => goTo(e, link.href)}
-                data-testid={`mobile-nav-link-${link.href.slice(1)}`}
+            <li key={link.path}>
+              <Link
+                to={link.path}
+                data-testid={`mobile-nav-link-${link.path === "/" ? "home" : link.path.slice(1)}`}
                 className={`block rounded-lg px-3 py-2.5 text-sm font-medium transition-colors duration-300 ${
-                  active === link.href.slice(1) ? "bg-royal/60 text-gold" : "text-ivory/80 hover:bg-royal/40 hover:text-white"
+                  isActive(link.path) ? "bg-royal/60 text-gold" : "text-ivory/80 hover:bg-royal/40 hover:text-white"
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
           <li className="pt-2">

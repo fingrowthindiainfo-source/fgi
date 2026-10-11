@@ -34,6 +34,11 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 3)
+- Site restructured from single-page to MULTI-PAGE: / (hero + benefits + CTA), /about, /services, /opportunities (audience cards + eligibility), /how-it-works, /leadership, /faqs, /contact, /start-work (signature flip card), /privacy-policy, /terms-and-conditions, 404
+- Navbar/footer now use react-router links with route-based active states; every page has its own document.title (useTitle hook)
+- All Start Your Work CTAs navigate to /start-work and auto-flip the inquiry card; verified on desktop + mobile
+
 ## Updates (2026-10-11, round 2)
 - Official FGI logo integrated (user-supplied): cropped web assets at /app/frontend/public/assets/fgi-logo.jpg + fgi-emblem.jpg; used in navbar, footer, loader, legal pages, 404 (mix-blend-screen over navy)
 - Applicant confirmation email ENABLED: "We Received Your Inquiry — Fin Growth India" sent after internal notification (best-effort; verified 202 Accepted for both)

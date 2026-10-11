@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Logo from "@/components/Logo";
+import useTitle from "@/hooks/useTitle";
 import { SITE } from "@/content";
 
 const Section = ({ title, children }) => (
@@ -10,7 +11,9 @@ const Section = ({ title, children }) => (
   </section>
 );
 
-const PrivacyPolicy = () => (
+const PrivacyPolicy = () => {
+  useTitle("Privacy Policy | Fin Growth India");
+  return (
   <div className="min-h-screen bg-navy" data-testid="privacy-policy-page">
     <header className="border-b border-gold/15 bg-navy/85 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-4xl items-center justify-between px-5">
@@ -45,6 +48,7 @@ const PrivacyPolicy = () => (
       </Section>
     </main>
   </div>
-);
+  );
+};
 
 export default PrivacyPolicy;

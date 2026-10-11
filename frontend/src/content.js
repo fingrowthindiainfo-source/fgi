@@ -21,14 +21,14 @@ export const IMAGES = {
 };
 
 export const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Opportunities", href: "#opportunities" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Leadership", href: "#leadership" },
-  { label: "FAQs", href: "#faqs" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", path: "/" },
+  { label: "About Us", path: "/about" },
+  { label: "Services", path: "/services" },
+  { label: "Opportunities", path: "/opportunities" },
+  { label: "How It Works", path: "/how-it-works" },
+  { label: "Leadership", path: "/leadership" },
+  { label: "FAQs", path: "/faqs" },
+  { label: "Contact", path: "/contact" },
 ];
 
 export const SERVICES = [
