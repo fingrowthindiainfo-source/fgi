@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, RotateCcw } from "lucide-react";
+import { ArrowRight, RotateCcw, Clock, ShieldCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { AUDIENCES } from "@/content";
 import { useInquiry } from "@/context/InquiryContext";
@@ -128,6 +128,19 @@ const AudienceCards = () => (
         <p className="mt-5 text-base leading-relaxed text-mist md:text-lg">
           Different backgrounds. Different ambitions. One place to explore your next step.
         </p>
+      </Reveal>
+
+      <Reveal delay={0.1}>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3" data-testid="opportunity-badges">
+          <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-royal/40 px-5 py-2.5 text-xs font-semibold tracking-wide text-gold backdrop-blur-sm">
+            <Clock size={14} />
+            Full-Time & Part-Time Options
+          </span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-royal/40 px-5 py-2.5 text-xs font-semibold tracking-wide text-gold backdrop-blur-sm">
+            <ShieldCheck size={14} />
+            No Investment Required
+          </span>
+        </div>
       </Reveal>
 
       <div className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">

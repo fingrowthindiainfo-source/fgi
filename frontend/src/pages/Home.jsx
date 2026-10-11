@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
+import Reviews from "@/components/Reviews";
 import Reveal from "@/components/Reveal";
 import useTitle from "@/hooks/useTitle";
 import { useInquiry } from "@/context/InquiryContext";
@@ -17,6 +18,7 @@ const Home = () => {
     <Layout offset={false}>
       <Hero />
       <Benefits />
+      <Reviews />
       <section className="relative overflow-hidden bg-navy py-24 lg:py-28" data-testid="home-cta-section">
         <div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/[0.07] blur-[120px]" aria-hidden="true" />
         <Reveal className="relative mx-auto max-w-2xl px-5 text-center">

@@ -34,6 +34,12 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 13)
+- Established date changed to May 2026 everywhere (site, meta description, JSON-LD foundingDate, llms.txt)
+- Services: added featured 7th card "Vendor & Campaign Partnerships" (vendors connected across campaigns, competitive payouts) + full-width "Your Own Working Dashboard" feature block with branded PIL-generated demo image (/assets/dashboard-demo.jpg, marked Demo Preview)
+- Opportunities page: gold badges "Full-Time & Part-Time Options" and "No Investment Required" under the heading
+- Home: new Reviews section ("Voices From Our Community") — 4 placeholder cards; real reviews PENDING from user (fabricated testimonials deliberately not written)
+
 ## Updates (2026-10-11, round 12)
 - New horizontal logo integrated: black background removed (tight alpha ramp keeps silver gradient intact), saved as transparent /assets/fgi-logo-wide.png; navbar/footer/legal/404 now show it with the small gold tagline "GROW TOGETHER · EARN TOGETHER" beneath; emblem (fgi-emblem.jpg) still used for loader, signature card, favicon, OG image
 

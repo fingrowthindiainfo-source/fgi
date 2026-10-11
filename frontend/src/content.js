@@ -3,7 +3,7 @@ export const SITE = {
   short: "FGI",
   tagline: "Your Growth Partner",
   brandMessage: "Grow Together, Earn Together",
-  established: "May 2022",
+  established: "May 2026",
   industry: "Financial Services & Business Support",
   address: "Mansarovar, Jaipur, Rajasthan – 302020",
   email: "fingrowthindia.info@gmail.com",
@@ -61,6 +61,12 @@ export const SERVICES = [
     icon: "Database",
     title: "Data Entry and Management",
     description: "Help organize information, maintain digital records, and support accurate data-management workflows.",
+  },
+  {
+    icon: "Handshake",
+    title: "Vendor & Campaign Partnerships",
+    description: "Vendors are connected across our campaigns, giving participants access to campaign opportunities with competitive payouts.",
+    featured: true,
   },
 ];
 
@@ -179,5 +185,28 @@ export const FAQS = [
   {
     q: "What information does the inquiry form collect?",
     a: "Only full name, city, email address, phone number, and age.",
+  },
+];
+
+export const REVIEWS = [
+  {
+    quote: "A review from an FGI participant will appear here once shared with us.",
+    name: "Your Story Here",
+    role: "FGI Participant",
+  },
+  {
+    quote: "A review from an FGI participant will appear here once shared with us.",
+    name: "Your Story Here",
+    role: "FGI Participant",
+  },
+  {
+    quote: "A review from an FGI participant will appear here once shared with us.",
+    name: "Your Story Here",
+    role: "FGI Participant",
+  },
+  {
+    quote: "A review from an FGI participant will appear here once shared with us.",
+    name: "Your Story Here",
+    role: "FGI Participant",
   },
 ];
