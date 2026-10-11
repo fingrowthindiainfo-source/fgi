@@ -34,6 +34,9 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - API: health, invalid phone/email/age rejection, valid submission → email sent
 - E2E (Playwright): hero CTA flip, validation errors, success screen, back flip, audience card flip + CTA, WhatsApp/call hrefs, FAQ accordion, privacy/terms/404 pages, mobile menu/card-tap/form
 
+## Updates (2026-10-11, round 4)
+- Per-page SEO: every route now sets a unique document.title + meta description + OG/Twitter title & description via extended useTitle hook (verified in-browser on 6 routes)
+
 ## Updates (2026-10-11, round 3)
 - Site restructured from single-page to MULTI-PAGE: / (hero + benefits + CTA), /about, /services, /opportunities (audience cards + eligibility), /how-it-works, /leadership, /faqs, /contact, /start-work (signature flip card), /privacy-policy, /terms-and-conditions, 404
 - Navbar/footer now use react-router links with route-based active states; every page has its own document.title (useTitle hook)

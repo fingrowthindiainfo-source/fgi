@@ -7,7 +7,10 @@ import useTitle from "@/hooks/useTitle";
 import { useInquiry } from "@/context/InquiryContext";
 
 const Home = () => {
-  useTitle("Fin Growth India | Business Support & Professional Growth Opportunities");
+  useTitle(
+    "Fin Growth India | Business Support & Professional Growth Opportunities",
+    "Explore business-support opportunities, skill development, and professional growth with Fin Growth India. Discover suitable roles and connect with our team."
+  );
   const { openInquiry } = useInquiry();
 
   return (

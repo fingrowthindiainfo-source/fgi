@@ -12,7 +12,10 @@ const Section = ({ title, children }) => (
 );
 
 const PrivacyPolicy = () => {
-  useTitle("Privacy Policy | Fin Growth India");
+  useTitle(
+    "Privacy Policy | Fin Growth India",
+    "Fin Growth India's privacy policy: what the inquiry form collects, how your details are used, and how your information is protected."
+  );
   return (
   <div className="min-h-screen bg-navy" data-testid="privacy-policy-page">
     <header className="border-b border-gold/15 bg-navy/85 backdrop-blur-xl">

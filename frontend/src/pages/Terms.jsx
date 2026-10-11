@@ -12,7 +12,10 @@ const Section = ({ title, children }) => (
 );
 
 const Terms = () => {
-  useTitle("Terms and Conditions | Fin Growth India");
+  useTitle(
+    "Terms and Conditions | Fin Growth India",
+    "Terms and conditions for using the Fin Growth India website and inquiry form, including inquiry, compensation, and acceptable-use terms."
+  );
   return (
   <div className="min-h-screen bg-navy" data-testid="terms-page">
     <header className="border-b border-gold/15 bg-navy/85 backdrop-blur-xl">
