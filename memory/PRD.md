@@ -40,6 +40,7 @@ Build a complete, premium, luxury-style website for Fin Growth India (FGI), an I
 - InquiryForm API base now falls back to same-origin /api when REACT_APP_BACKEND_URL is unset (Vercel); Emergent preview unchanged (managed email, verified still working)
 - .gitignore now blocks all .env files; /app/DEPLOYMENT.md has full Vercel + Resend setup steps
 - Pending from user: Resend account, verified sending domain, RESEND_API_KEY → set as Vercel env vars (never REACT_APP_*)
+- RESEND_API_KEY received from user and VERIFIED with a live send through /app/frontend/api/inquiry.py (notification + confirmation both accepted by Resend, sender onboarding@resend.dev). Key used in-memory only — never written to any repo file. Still pending: domain verification in Resend so any applicant address can receive confirmations.
 
 ## Updates (2026-10-11, round 9)
 - Founder photo wired in: Vikram Nehra (user-supplied, 560×560 portrait) — Leadership section is now complete with all three real photos, no placeholders remain
