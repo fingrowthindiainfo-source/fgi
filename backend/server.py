@@ -246,6 +246,32 @@ def _inquiry_email_html(data: Inquiry, submitted_at: str) -> str:
     )
 
 
+def _confirmation_email_html(full_name: str) -> str:
+    name = escape(full_name)
+    return (
+        '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
+        'style="background:#071426;padding:32px 16px;font-family:Arial,Helvetica,sans-serif">'
+        '<tr><td align="center">'
+        '<table role="presentation" width="600" cellpadding="0" cellspacing="0" '
+        'style="max-width:600px;width:100%;background:#102B4E;border:1px solid #D6B574;border-radius:12px;overflow:hidden">'
+        '<tr><td style="padding:28px 32px;border-bottom:2px solid #D6B574">'
+        '<div style="color:#D6B574;font-size:12px;letter-spacing:0.24em;text-transform:uppercase">Fin Growth India</div>'
+        '<div style="color:#FFFFFF;font-size:22px;font-weight:bold;margin-top:8px">We Received Your Inquiry</div>'
+        '</td></tr>'
+        '<tr><td style="padding:28px 32px;color:#F7F4ED;font-size:15px;line-height:1.7">'
+        f'<p style="margin:0 0 16px">Hello {name},</p>'
+        '<p style="margin:0 0 16px">Thank you for your interest in Fin Growth India.</p>'
+        '<p style="margin:0 0 16px">We have received your inquiry successfully. Our team will review your '
+        'details and contact you if an appropriate opportunity is available.</p>'
+        '<p style="margin:0;color:#A8B3C5;font-size:13px">Please note that submitting an inquiry does not '
+        'guarantee selection, work allocation, or earnings.</p>'
+        '</td></tr>'
+        '<tr><td style="padding:20px 32px;background:#071426;color:#A8B3C5;font-size:12px">'
+        'Regards,<br/>Fin Growth India<br/>Your Growth Partner</td></tr>'
+        '</table></td></tr></table>'
+    )
+
+
 @api_router.post("/inquiry")
 async def submit_inquiry(inquiry: Inquiry, request: Request):
     if not APPLICATION_RECEIVER_EMAIL:
@@ -266,6 +292,19 @@ async def submit_inquiry(inquiry: Inquiry, request: Request):
         reply_to=inquiry.email,
     )
     logger.info(f"Inquiry email sent (id={email_id})")
+
+    # Applicant confirmation email — best effort: the inquiry is already delivered,
+    # so a confirmation failure must not turn into a user-facing error.
+    try:
+        confirm_id = await send_email(
+            to=inquiry.email,
+            subject="We Received Your Inquiry — Fin Growth India",
+            html=_confirmation_email_html(inquiry.full_name),
+        )
+        logger.info(f"Confirmation email sent (id={confirm_id})")
+    except Exception as e:
+        logger.warning(f"Confirmation email failed for inquiry (id={email_id}): {getattr(e, 'detail', e)}")
+
     return {"status": "success", "message": "Your inquiry has been submitted successfully."}
 
 

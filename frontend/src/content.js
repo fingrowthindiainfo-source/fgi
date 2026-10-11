@@ -9,7 +9,7 @@ export const SITE = {
   email: "fingrowthindia.info@gmail.com",
   phoneDisplay: "+91 97858 68775",
   phoneHref: "tel:+919785868775",
-  whatsapp: "https://wa.me/919785868775",
+  whatsapp: "https://wa.me/919785868775?text=Hello%20Fin%20Growth%20India%2C%20I%20visited%20your%20website%20and%20I%27d%20like%20to%20explore%20work%20opportunities.%20Please%20guide%20me%20through%20the%20next%20steps.",
 };
 
 export const IMAGES = {
