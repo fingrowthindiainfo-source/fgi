@@ -160,7 +160,15 @@ async def create_inquiry(inquiry: Inquiry, request: Request):
             ),
         })
     except ResendError as exc:
-logger.error(f"Resend notification failed: {type(exc).__name__} code={getattr(exc, 'code', None)} message={getattr(exc, 'message', exc)}")        raise HTTPException(status_code=502, detail="We could not send your inquiry right now. Please try again.")
+        logger.error(
+            f"Resend notification failed: {type(exc).__name__} "
+            f"code={getattr(exc, 'code', None)} "
+            f"message={getattr(exc, 'message', exc)}"
+        )
+        raise HTTPException(
+            status_code=502,
+            detail="We could not send your inquiry right now. Please try again.",
+        )
 
     # No applicant confirmation email — the visitor only sees the on-site
     # success message; inquiry details go to the owner inbox only.
