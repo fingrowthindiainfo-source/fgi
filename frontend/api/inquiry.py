@@ -18,6 +18,7 @@ from datetime import datetime, timezone, timedelta
 
 import resend
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.concurrency import run_in_threadpool
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr, field_validator
 from resend.exceptions import ResendError
@@ -146,7 +147,7 @@ async def create_inquiry(inquiry: Inquiry, request: Request):
     resend.api_key = api_key
 
     try:
-        await resend.Emails.send_async({
+        await run_in_threadpool(resend.Emails.send, {
             "from": sender,
             "to": [receiver],
             "reply_to": str(inquiry.email),
