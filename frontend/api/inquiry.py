@@ -160,15 +160,18 @@ async def create_inquiry(inquiry: Inquiry, request: Request):
             ),
         })
     except ResendError as exc:
+        reason = getattr(exc, "message", None) or str(exc)
         logger.error(
-            f"Resend notification failed: {type(exc).__name__} "
-            f"code={getattr(exc, 'code', None)} "
-            f"message={getattr(exc, 'message', exc)}"
+            "Resend failed | type=%s | code=%s | error_type=%s | message=%s | from=%s | to=%s",
+            type(exc).__name__,
+            getattr(exc, "code", None),
+            getattr(exc, "error_type", None),
+            reason,
+            sender,
+            receiver,
         )
-        raise HTTPException(
-            status_code=502,
-            detail="We could not send your inquiry right now. Please try again.",
-        )
+        # TEMPORARY: reason dikhane ke liye. Problem solve hone ke baad hata dena.
+        raise HTTPException(status_code=502, detail=f"Email failed: {reason}")
 
     # No applicant confirmation email — the visitor only sees the on-site
     # success message; inquiry details go to the owner inbox only.
